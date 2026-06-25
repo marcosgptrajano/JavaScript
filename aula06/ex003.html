@@ -20,14 +20,15 @@
 </head>
 <body>
     <main>
-        <h1>Olá mundo!</h1>
+        <h1 id="titulo">Olá mundo!</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur assumenda asperiores beatae, facere quis nesciunt consequuntur eligendi, at harum, architecto error perferendis? Unde cumque hic porro quam cum, modi libero.</p>
     </main>
 
     <script>
-        window.alert('Meu Primeiro alerta!');
-        window.confirm('Está gostando de JS?'); // Janela com botão Ok e Cancelar  
-        window.prompt('Qual é seu nome?'); //Vai perguntar nome
+        var n1 = Number(window.prompt('Digite um número'))
+        var n2 = Number(window.prompt('Digite outro número'))
+        var s = n1 + n2
+        window.alert(`A soma ente ${n1} e ${n2} é ${s}`)
     </script>
 </body>
 </html>
