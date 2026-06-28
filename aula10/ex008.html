@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendendo DOM</title>
+    <style>
+        input[type ="number"]{
+            width: 60px;
+        }
+        body{
+            font: 1.5em Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <form action="">
+        <input type="number" name="txtn1" id="txtn1">
+        +
+        <input type="number" name="txtn2" id="txtn2">
+        <input type="button" value="Somar" onclick="somar()">
+        <br>
+        <br>
+        <div >
+            Resultado: <output id="res"></output>
+        </div>
+    </form>
+   <script>
+    function somar(){
+        var n1 = window.document.getElementById('txtn1');
+        var n2 = document.querySelector('input#txtn2');
+
+        var v1 = Number(n1.value);
+        var v2 = Number(n2.value);
+
+
+        var res = document.getElementById('res');
+        var  s = v1 + v2;
+
+
+        res.innerHTML= `A soma ente  ${v1} e ${v2 } é igual a <strong> ${s} </strong>`;
+
+    }
+</script>
+</body>
+</html>

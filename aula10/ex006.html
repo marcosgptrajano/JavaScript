@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos DOM</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        body{
+            display: flex;
+            align-items: center;
+            justify-items: center;
+            height: 100vh;
+            background-color: dodgerblue;
+        }
+        #area{
+            
+            border-radius: 10px;
+            margin: auto;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            color: white;
+            font: bold 1.5em Arial;
+            line-height: 200px;
+            border: 3px solid white;
+            box-shadow: 0px 12px white;
+
+           
+        }
+        #area:hover{
+            transition: 0.5s;
+            cursor: pointer;
+            box-shadow: 0px 5px white;
+            transform: translate(0, 10px);
+        }
+
+        #area:active{
+            border-color: darkblue;
+            box-shadow: 0px 5px darkblue;
+            color: darkblue;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="area" >
+        Interaja...
+    </div>
+
+    <script>
+        
+        var area = document.querySelector('#area');
+        area.addEventListener('mousedown', apertar);
+        area.addEventListener('click', clicar);
+        area.addEventListener('mouseenter', passar);
+        area.addEventListener('mouseout', tirar);
+        
+
+        function clicar(){
+            console.log('clicou');
+            area.innerText = `Clicou`;
+        }
+        function passar(){
+            console.log('Passou o mouse');
+            area.innerText =`Passou o mouse`;
+        }
+        function tirar(){
+            console.log('Tirou');
+            area.innerText =`Tirou o mouse`;
+        }
+        function apertar(){
+            console.log('apertando');
+            area.innerText =`Apertando!!`;
+        }
+        function interaja(){
+            area.innerText =`Interaja...`;
+        }
+    </script>
+</body>
