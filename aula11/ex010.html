@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicionais</title>
+    <style>
+        body{
+            display: grid;
+            grid-template: 97dvh / 1fr;
+            justify-items: center;
+            align-items: center;
+            background-color: darkblue;
+            color: orange;
+            font: normal 1em Arial;
+        }
+        output{
+            background-color: white;
+            margin: 0px;
+            text-align: center;
+            
+            font-size: 24px;
+        }
+        div{
+            text-align: center;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Qual é a sua velocidade?</h1>
+        <form >
+            <div>
+                <input type="text" id="veltxt" placeholder="Sua velocidade" required>
+                km/h
+                <input type="button" value="Enviar" onclick="multa()">
+            </div>
+            <div>
+             <output id="out"></output>
+            </div>
+            
+        </form>
+        <script>
+            let vel = document.querySelector('input#veltxt');
+            function multa(){
+                
+                let velvalue = Number(vel.value)
+                let out = document.querySelector('#out')
+
+                console.log(velvalue);
+                if(velvalue > 60){
+                    out.style.color = 'red';
+                    out.innerHTML = `<strong> MULTADO!</strong>`;
+                } else{
+                    out.style.color = 'green';
+                    out.innerHTML = `<strong> TUDO CERTO!</strong>`;
+                }
+            }
+
+        </script>
+    </main>
+</body>
+</html>
